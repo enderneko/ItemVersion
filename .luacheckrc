@@ -12,6 +12,13 @@ files["ItemVersion/Data.lua"] = {
 	}
 }
 
+-- Different languages shouldn't have code formatting requirements
+files['ItemVersion/Locales/*.lua'] = {
+	ignore = {
+		"631", -- Line is too long.
+	}
+}
+
 globals = {
 	-- provided by WoW API
 	-- "format",
@@ -50,11 +57,16 @@ globals = {
 	"IsControlKeyDown",
 	"IsAltKeyDown",
 	"WrapTextInColor",
+	"IsMacClient",
+	"IsMetaKeyDown",
+	"CMD_KEY_TEXT",
+	"InterfaceOptionsFrame_OpenToCategory",
+	"Round",
+	"WrapTextInColorCode",
 
 	-- provided by libs
 	"LibStub",
 
 	-- provided by ItemVersion
 	"ItemVersion",
-	"SLASH_ITEMVERSION1",
 }
